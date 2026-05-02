@@ -57,7 +57,7 @@ export default function handler(req, res) {
   const insult = insults[Math.floor(Math.random() * insults.length)];
   const msg = `🔔 **PERDANT DU JOUR** 🔔\n\n**${perdant}** ${insult} 💀`;
 
-  fetch("https://discord.com/api/webhooks/1500161938808901662/6rhRsOUyDdjs9nS9m5L7aPRkQ8nl3BS1ftd3ni49ouo0fG6K1VtFbc9jgRRsJexBP8oJ", {
+  fetch("https://discord.com/api/webhooks/1500186830727811212/HEsfZn1JJrEOeHZ-3_VNey-VOwyuqRVn9ZPMTy4ssmzwLwLc6Cwze6-1yWIqZOkF1L2L", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ content: msg })
