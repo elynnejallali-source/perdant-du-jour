@@ -1,4 +1,4 @@
-export default function handler(req, res) {
+export default async function handler(req, res) {
   const potes = [
     "Gregory Gregory",
     "John Rondon",
@@ -32,7 +32,7 @@ export default function handler(req, res) {
     "a mis ses chaussures au frigo pour les garder fraîches",
     "a envoyé un vocal de 12 minutes pour dire juste oui",
     "pense que les escalators sont une option et non une obligation",
-    "a tenté de négocier avec une distributeur en panne",
+    "a tenté de négocier avec un distributeur en panne",
     "a fait une liste de courses et a oublié la liste chez lui",
     "a salué quelqu'un qui agitait la main vers quelqu'un d'autre derrière lui",
     "a mis son réveil à 7h00 puis à 7h01 par sécurité",
@@ -57,7 +57,7 @@ export default function handler(req, res) {
   const insult = insults[Math.floor(Math.random() * insults.length)];
   const msg = `🔔 **PERDANT DU JOUR** 🔔\n\n**${perdant}** ${insult} 💀`;
 
-  fetch("https://discord.com/api/webhooks/1500186830727811212/HEsfZn1JJrEOeHZ-3_VNey-VOwyuqRVn9ZPMTy4ssmzwLwLc6Cwze6-1yWIqZOkF1L2L", {
+  await fetch("https://discord.com/api/webhooks/1500186830727811212/HEsfZn1JJrEOeHZ-3_VNey-VOwyuqRVn9ZPMTy4ssmzwLwLc6Cwze6-1yWIqZOkF1L2L", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ content: msg })
